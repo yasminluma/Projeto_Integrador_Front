@@ -18,6 +18,7 @@ userLogin:UserLogin= new UserLogin()
     private router:Router
   ) { }
 
+
   ngOnInit() {
     window.scroll(0,0)
   }

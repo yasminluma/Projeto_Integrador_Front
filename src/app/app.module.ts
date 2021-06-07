@@ -14,6 +14,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { ChatGeralComponent } from './chat-geral/chat-geral.component';
 import { SomosComponent } from './somos/somos.component';
+import { MinhaContaComponent } from './minha-conta/minha-conta.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { SomosComponent } from './somos/somos.component';
     InicioComponent,
     ProdutoComponent,
     ChatGeralComponent,
-    SomosComponent
+    SomosComponent,
+    MinhaContaComponent
   ],
   imports: [
     BrowserModule,
