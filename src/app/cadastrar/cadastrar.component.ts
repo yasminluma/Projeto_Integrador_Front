@@ -14,6 +14,7 @@ user:Usuario=new Usuario
 confirmarSenha:string
 
 
+
   constructor(
     private authService:AuthService,
     private router:Router
@@ -36,5 +37,6 @@ confirmarSenha:string
         })
       }
     }
+
 
 }
