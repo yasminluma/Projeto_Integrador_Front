@@ -10,15 +10,13 @@ import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
-<<<<<<< HEAD
 import { InicioComponent } from './inicio/inicio.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { ChatGeralComponent } from './chat-geral/chat-geral.component';
-=======
 import { HomeComponent } from './home/home.component';
 import { SomosComponent } from './somos/somos.component';
+import { CategoriaComponent } from './categoria/categoria.component';
 
->>>>>>> 21a2d2a9e2477f67b870f26c9a6ddfacab59ee48
 
 @NgModule({
   declarations: [
@@ -27,14 +25,12 @@ import { SomosComponent } from './somos/somos.component';
     RodapeComponent,
     EntrarComponent,
     CadastrarComponent,
-<<<<<<< HEAD
     InicioComponent,
     ProdutoComponent,
-    ChatGeralComponent
-=======
+    ChatGeralComponent,
     HomeComponent,
-    SomosComponent
->>>>>>> 21a2d2a9e2477f67b870f26c9a6ddfacab59ee48
+    SomosComponent,
+    CategoriaComponent
   ],
   imports: [
     BrowserModule,
