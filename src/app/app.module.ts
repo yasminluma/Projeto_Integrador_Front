@@ -10,6 +10,9 @@ import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { ProdutoComponent } from './produto/produto.component';
+import { ChatGeralComponent } from './chat-geral/chat-geral.component';
 import { HomeComponent } from './home/home.component';
 import { SomosComponent } from './somos/somos.component';
 
@@ -21,6 +24,9 @@ import { SomosComponent } from './somos/somos.component';
     RodapeComponent,
     EntrarComponent,
     CadastrarComponent,
+    InicioComponent,
+    ProdutoComponent,
+    ChatGeralComponent,
     HomeComponent,
     SomosComponent
   ],
