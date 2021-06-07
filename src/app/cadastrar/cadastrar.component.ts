@@ -27,7 +27,7 @@ confirmarSenha:string
     }
     cadastrar(){
       if (this.user.senha != this.confirmarSenha) {
-        alert('As senhas tem que ser iguais')
+        alert('As senhas devem ser iguais')
       } else {
         this.authService.cadastrar(this.user).subscribe((resp: Usuario) => {
           this.user = resp
