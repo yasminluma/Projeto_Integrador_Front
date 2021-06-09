@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { Produto } from '../model/Produto';
+import { ProdutoService } from '../service/produto.service';
 
 @Component({
   selector: 'app-inicio',
@@ -17,30 +18,38 @@ export class InicioComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private http: HttpClient
+    private produtoService:ProdutoService
+
   ) { }
 
   token = {
     headers:new HttpHeaders().set('Authorization', environment.token)
   }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    if(environment.token==''){
+      alert('Sua sessão expirou,faça o login novamente')
+      this.router.navigate(['/entrar'])
+    }
+
+    this.findAllProdutos()
   }
 
-  getAllProduto(): Observable<Produto[]>{
-    return this.http.get<Produto[]>('http://localhost:8080/produto', this.token)
-  }
-
-  postProduto(produto: Produto): Observable<Produto>{
-    return this.http.post<Produto>('http://localhost:8080/produto', produto, this.token)
-  }
+  findAllProdutos(){
+    this.produtoService.getAllProduto().subscribe((resp:Produto[])=>{
+      this.listaProdutos = resp
+    })
+  } 
 
   publicar(){
-    this.postProduto(this.produto).subscribe((resp: Produto)=>{
+    this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
     this.produto = resp
 
     alert('Tema cadastrado com sucesso!')
     this.produto = new Produto()
+    this.findAllProdutos()
+    this.produto=new Produto()
+
     } )
   }
 
