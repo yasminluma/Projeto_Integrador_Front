@@ -1,11 +1,5 @@
-<<<<<<< HEAD
+<app-menu *ngIf='auth.logado()'></app-menu>
+
 <router-outlet></router-outlet>
-=======
-<<<<<<< HEAD
-<app-menu></app-menu>
-<app-chat-geral></app-chat-geral>
-<app-rodape></app-rodape>
-=======
-<app-somos></app-somos>
->>>>>>> 21a2d2a9e2477f67b870f26c9a6ddfacab59ee48
->>>>>>> 58716dbb7a185cbb30ce4dde984f57f41d0a9d3c
+
+<app-rodape *ngIf='auth.logado()'></app-rodape>
