@@ -34,12 +34,7 @@ export class EntrarComponent implements OnInit {
       if (erro.status == 500) {
         alert('Usuário ou senha incorretos')
       }
-<<<<<<< HEAD
-    }
-    
-=======
 
     })
   }
 }
->>>>>>> e1a3bf8e8ba814299b3fbf4ba34159f7490464c5
