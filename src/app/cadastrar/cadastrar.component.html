@@ -12,14 +12,14 @@
 
                 <div class="md-12">
 
-                        <div class="form-group">
+                    <div class="form-group">
                         <label for="nome">Nome</label>
-                        <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome" style="width: 650px;"  placeholder="Insira seu nome completo">
+                        <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome" style="width: 650px;" placeholder="Insira seu nome completo">
                     </div>
-                
+
                     <div class="form-group">
                         <label for="email">E-mail</label>
-                        <input [(ngModel)]='user.email' class="form-control" type="text" name="email" id="email" placeholder="Insira seu e-mail">
+                        <input [(ngModel)]='user.email' class="form-control" type="email" name="email" id="email" placeholder="Insira seu e-mail">
                     </div>
                     <div class="form-group">
                         <label for="senha">Senha</label>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="form-group">
                         <label for="confirmSenha">Confirmar Senha</label>
-                        <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha">
+                        <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha" required>
                     </div>
 
                     <div class="d-flex justify-content-center">
