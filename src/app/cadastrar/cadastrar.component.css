@@ -17,6 +17,13 @@
     background-color: rgba(255, 255, 255, 0.815);
 }
 
+.example1 {
+    border-radius: 15px 800px 30px;
+    width: 350px;
+    height: 590px;
+    background-color: rgba(255, 255, 255, 0.815);
+}
+
 .campos {
     width: 250px;
 }
@@ -40,14 +47,10 @@
 }
 
 .corpo {
-    background-color: rgba(133, 226, 105, 0.548);
-}
-
-.corpo {
     background-color: #006B54;
 }
 
 .logo {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
 }
