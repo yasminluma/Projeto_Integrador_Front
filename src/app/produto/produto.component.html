@@ -1,13 +1,29 @@
 <div class="container">
     <div class="col-md-12 px-5">
 
+        <!--Teste editar e deletar-->
+        <div class="container-md-12">
+            <div class="row mt-5 d-flex justify-content-end">
+                <a [routerLink]="['/produto-edit', produto.id]" class="mr-2" ><button type="button" class="btn btn-primary">Editar</button></a>
+                <a [routerLink]="['/produto-delete', produto.id]" href=""><button type="button" class="btn btn-danger">Deletar</button></a>
+                <!---->
+                <a [routerLink]="['/produto-delete', produto.id]" href="" type="button" class="btn btn-danger">Deletar</a>
+            </div>
+        </div>
+        <!--/Teste editar e deletar-->
+
+
+
+
+
         <!--Foto do produto-->
         <div class="produto">
             <div class="row d-flex justify-content-center">
                 <div class="container-fluid " >
                     <div class="d-flex justify-content-center">
-                        <img src="https://www.wikihow.com/images_en/thumb/a/a9/Buy-a-Good-Avocado-Step-1-Version-4.jpg/v4-460px-Buy-a-Good-Avocado-Step-1-Version-4.jpg.webp" class="img-fluid fotoProduto" alt="Imagem responsiva">
+                        <img src="" class="img-fluid fotoProduto" alt="Imagem responsiva">
                     </div>
+                    <!--{{produto.foto}}-->
                 </div>
             </div>
         </div>
@@ -20,19 +36,22 @@
             <div class="row mt-5">
                 <div class="col-md-6">
                     <div class="container d-flex justify-content-start">
-                        <p class="nomeProduto">Nome do Produto</p>
+                        <p class="nomeProduto">nome</p>
                     </div>
+                    <!--{{produto.nome}}-->
                 </div>
 
                 <div class="col-md-6">
                     <div class="container d-flex justify-content-end">
-                       <p class="valorProduto">Valor</p>
+                       <p class="valorProduto">preço</p>
                     </div>
+                    <!--{{produto.preco}}-->
 
                     <div class="row">
                         <div class="container d-flex justify-content-end">
-                            <p class="publicacaoProduto">Data da publicação</p>
+                            <p class="publicacaoProduto">Data da publicação</p> 
                         </div>
+                        <!--{{produto.data}}-->
                     </div>
                 </div>
             </div>  
@@ -55,8 +74,11 @@
 
 
         <!--Contato com vendedore-->
-        <div class="col-md-12 d-flex justify-content-end mt-2">
-            <button type="button" class="btn btn-success btn-lg">Mande mensagem</button>
+        <div class="col-md-12 d-flex justify-content-end mt-2 ">
+            <a class="mr-2" href="http://api.whatsapp.com/send?phone=5511998898997." target="_blank"> <button type="button" class="btn btn-success" >Whatsapp</button></a>
+            <!--{{usuario.celular}}-->
+
+            <a href="{{usuario.email}}" target="_blank"> <button type="button" class="btn btn-success lm-2" >Email</button></a>
         </div>
         <!--/Contato com vendedore-->
 
