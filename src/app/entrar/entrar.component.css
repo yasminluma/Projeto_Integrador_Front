@@ -47,3 +47,28 @@
     height: 200px;
     width: 200px;
 }
+
+.borderLeftRight {
+    display: inline-block;
+    position: relative;
+    color: hsl(222, 25%, 14%);
+    cursor: pointer;
+}
+
+.borderLeftRight::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #F9960E;
+    transform-origin: bottom right;
+    transition: transform 0.9s cubic-bezier(0.86, 0, 0.02, 1);
+}
+
+.borderLeftRight:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
