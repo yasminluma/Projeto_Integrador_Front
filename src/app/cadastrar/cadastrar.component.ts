@@ -15,6 +15,7 @@ export class CadastrarComponent implements OnInit {
   email: string
 
 
+
   constructor(
     private authService: AuthService,
     private router: Router
@@ -38,4 +39,5 @@ export class CadastrarComponent implements OnInit {
     }  
 
   }
+
 }

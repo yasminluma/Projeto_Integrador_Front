@@ -13,7 +13,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { ChatGeralComponent } from './chat-geral/chat-geral.component';
-import { HomeComponent } from './home/home.component';
+import { MinhaContaComponent } from './minha-conta/minha-conta.component';
 import { SomosComponent } from './somos/somos.component';
 
 
@@ -27,10 +27,13 @@ import { SomosComponent } from './somos/somos.component';
     InicioComponent,
     ProdutoComponent,
     ChatGeralComponent,
-    HomeComponent,
-    SomosComponent
+    SomosComponent,
+
+    MinhaContaComponent,
+    SomosComponent,
 
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
