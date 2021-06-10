@@ -1,0 +1,17 @@
+.navbar{
+    background-color: #006B54;
+}
+
+a{
+    color: rgb(255, 255, 255);
+}
+
+.textTransformX {
+    color: hsl(26, 7%, 20%);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.textTransformX:hover {
+    transform: translateX(4px);
+    color: hsl(147, 43%, 37%);
+}
