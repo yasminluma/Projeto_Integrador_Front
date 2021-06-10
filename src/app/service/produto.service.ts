@@ -31,7 +31,7 @@ export class ProdutoService {
     return this.http.put<Produto>('https://projefas.herokuapp.com/produto', produto, this.token)
   }
 
-  deletePostagem(id:number): Observable<Produto>{
+  deleteProduto(id:number): Observable<Produto>{
     return this.http.delete<Produto>(`https://projefas.herokuapp.com/produto/${id}`,this.token)
   }
 }
