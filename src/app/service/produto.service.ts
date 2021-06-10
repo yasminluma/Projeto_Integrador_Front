@@ -19,11 +19,19 @@ export class ProdutoService {
     return this.http.get<Produto[]>('https://projefas.herokuapp.com/', this.token)
   }
 
-  getByIProduto(id:number):Observable<Produto>{
+  getByIdProduto(id:number):Observable<Produto>{
     return this.http.get<Produto>(`https://projefas.herokuapp.com/produto/${id}`,this.token)
     }
 
   postProduto(produto: Produto): Observable<Produto>{
     return this.http.post<Produto>('https://projefas.herokuapp.com/produto', produto, this.token)
+  }
+
+  putProduto(produto: Produto): Observable<Produto>{
+    return this.http.put<Produto>('https://projefas.herokuapp.com/produto', produto, this.token)
+  }
+
+  deletePostagem(id:number): Observable<Produto>{
+    return this.http.delete<Produto>(`https://projefas.herokuapp.com/produto/${id}`,this.token)
   }
 }

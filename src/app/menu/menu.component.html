@@ -1,31 +1,87 @@
 <!--Menu-->
 <nav class="navbar navbar-expand-lg ">
-    <a class="navbar-brand myLogo" href="#"><img src="https://i.imgur.com/DecAfeT.png" class="logo"/></a>    
-  
-    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link text-monospace font-weight-bold fs-14" href="#">Home |<span class="sr-only">(página atual)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-monospace font-weight-bold fs-14" href="#">Produtos |</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-monospace font-weight-bold fs-14" href="#">Cadastrar produtos |</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-monospace font-weight-bold fs-14" href="#">Quem somos</a>
-        </li>      
-      </ul>  
+  <a class="navbar-brand myLogo" href="#"><img src="https://i.imgur.com/DecAfeT.png" class="logo"/></a>    
 
-      <ul class="navbar-nav ml-auto d-flex align-items-center">
-        <li class="nav-item">
-          <a class="nav-link text-monospace font-weight-bold fs-14" href="#">Minha conta</a>
-        </li>
-      </ul>
-      
-      
-    </div>
-  </nav>
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home<span class="sr-only">(página atual)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Produtos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Cadastrar produtos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Quem somos</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Minha conta</a>
+      </li>
+
+    </ul>  
+    
+  </div>
+</nav>
 
 <!--Menu-->
+
+
+
+<button type="button" class="btn btn-primary mt-5"  data-toggle="modal" data-target="#modalExemplo">
+  Publicar produto
+</button>
+
+<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+  <div class="modal-content">
+      <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Novo Produto</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+
+      <div class="modal-body">
+          
+          <div class="form-group">
+              <label for="nome">Nome do produto</label>
+              <input [(ngModel)]='produto.nome' type="text" class="form-control" id="nomeProduto" placeholder="Insira o nome do produto">
+          </div>
+          <!--[(ngModel)]='produto.nome'-->
+
+          <div class="form-group">
+              <label for="preco">Preço do produto</label>
+              <input [(ngModel)]='produto.preco' type="text" class="form-control" id="precoProduto" placeholder="Insira o preço do produto">
+          </div>
+          <!--[(ngModel)]='produto.preco'-->
+
+          <div class="form-group">
+              <label for="categoria">Categoria do produto</label>
+              <select name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria' (change)='findByIdCategoria'>
+                  <option *ngFor='let item of listaCategoria' value="{{item.id}}"><!--*ngFor='let item of listaCategoria' value="{{item.id}}"-->
+                    Categorias <!--{{item.nome}}-->
+                  </option>
+              </select>
+          </div>
+
+          <div class="form-group">
+              <label for="linkImagemProduto">Link da imagem</label>
+              <input type="text" class="form-control" id="imagemProduto" placeholder="Insira o link da imagem do produto">
+          </div>
+
+          <div class="form-group">
+              <label [(ngModel)]='produto.observacao' for="descricao">Descrição do produto</label>
+              <textarea class="form-control" name="descricao" id="descricao" rows="5"></textarea>
+          </div>
+      </div>
+
+      <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+      <button type="button" class="btn btn-primary" (click)='publicar()' data-dismiss="modal">Publicar</button>
+      </div>
+  </div>
+  </div>
+</div> 
