@@ -15,7 +15,6 @@ import { ProdutoComponent } from './produto/produto.component';
 import { ChatGeralComponent } from './chat-geral/chat-geral.component';
 import { MinhaContaComponent } from './minha-conta/minha-conta.component';
 import { SomosComponent } from './somos/somos.component';
-import { CategoriaComponent } from './categoria/categoria.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 
@@ -30,12 +29,15 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
     InicioComponent,
     ProdutoComponent,
     ChatGeralComponent,
+    SomosComponent,
+
     MinhaContaComponent,
     SomosComponent,
-    CategoriaComponent,
     ProdutoEditComponent,
     ProdutoDeleteComponent
+
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
