@@ -13,10 +13,14 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { ChatGeralComponent } from './chat-geral/chat-geral.component';
-import { HomeComponent } from './home/home.component';
-import { SomosComponent } from './somos/somos.component';
-import { MinhaContaComponent } from './minha-conta/minha-conta.component';
 import { UserEditComponent } from './edit/user-edit.component';
+import { MinhaContaComponent } from './minha-conta/minha-conta.component';
+import { SomosComponent } from './somos/somos.component';
+import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
+import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
+import { FrutaComponent } from './fruta/fruta.component';
+import { LegumesComponent } from './legumes/legumes.component';
+import { VerdurasComponent } from './verduras/verduras.component';
 
 
 @NgModule({
@@ -31,12 +35,26 @@ import { UserEditComponent } from './edit/user-edit.component';
     ProdutoComponent,
     ChatGeralComponent,
 
-    HomeComponent,
     SomosComponent,
     MinhaContaComponent,
     UserEditComponent,
 
+    InicioComponent,
+    ProdutoComponent,
+    ChatGeralComponent,
+    SomosComponent,
+    FrutaComponent,
+
+    MinhaContaComponent,
+    SomosComponent,
+    ProdutoEditComponent,
+    ProdutoDeleteComponent,
+    FrutaComponent,
+    LegumesComponent,
+    VerdurasComponent
+
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,

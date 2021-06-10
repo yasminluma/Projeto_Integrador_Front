@@ -1,10 +1,38 @@
+.navbar{
+  background-color: #006B54;
+}
+
+a{
+  color: rgb(255, 255, 255);
+}
+
+.logo{
+  width: 70px;
+  height: 70px;
+}
+.logo{
+  width: 70px;
+  height: 70px;
+}
 .img-1 {
-  width: 700px;
+  width: 50px;
 
-  Height: 200px;
+  Height: 250px;
 
-  Top: 50px;
+  Top: 40px;
 
-  Left: 60px;
+  Left: 80px;
 
+}
+
+.text-titulo{
+  color:black
+  
+}
+.text-tm{
+ width: 300;
+ height: 150; 
+}
+.text-link{
+  color:darkblue
 }

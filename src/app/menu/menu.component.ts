@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment.prod';
+import { Router } from '@angular/router';
+import { Categoria } from '../model/Categoria';
+import { Produto } from '../model/Produto';
+import { Usuario } from '../model/Usuario';
+import { CategoriaService } from '../service/categoria.service';
+import { ProdutoService } from '../service/produto.service';
+
 
 @Component({
   selector: 'app-menu',
@@ -9,9 +15,52 @@ import { environment } from 'src/environments/environment.prod';
 export class MenuComponent implements OnInit {
   
 
-  constructor() { }
+  
 
-  ngOnInit(): void {
+  usuario: Usuario = new Usuario()
+  //idUsuario: environment.id
+
+  produto: Produto = new Produto()
+
+  categoria: Categoria = new Categoria()
+  idCategoria: number
+  listaCategoria: Categoria[]
+
+  constructor(
+    private router: Router,
+    private categoriaService: CategoriaService,
+    private produtoService: ProdutoService
+  ) { }
+
+  ngOnInit(){
+    window.scroll(0,0)
+
+    this.getAllCategoria
   }
 
+  getAllCategoria(){
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[])=>{
+      this.listaCategoria = resp
+    })
+  }
+
+  findByIdCategoria(){
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp:Categoria)=>{
+      this.categoria = resp
+    })
+  }
+
+  publicar(){
+    this.categoria.id = this.idCategoria
+    this.produto.categoria = this.categoria
+
+    //this.usuario.id = this.idUsuario
+    this.produto.usuario = this.usuario
+
+    this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
+      this.produto = resp
+      alert('Postagem realizada com sucesso!')
+      this.produto = new Produto()
+    })
+  }
 }

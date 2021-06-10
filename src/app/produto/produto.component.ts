@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Produto } from '../model/Produto';
+import { Usuario } from '../model/Usuario';
 
 @Component({
   selector: 'app-produto',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProdutoComponent implements OnInit {
 
-  constructor() { }
+  produto: Produto = new Produto()
+  usuario: Usuario = new Usuario()
 
-  ngOnInit(): void {
+  constructor(
+
+  ) { }
+
+  ngOnInit( ){
+    window.scroll(0,0)
   }
 
+  publicar(){
+
+  }
+  
 }
