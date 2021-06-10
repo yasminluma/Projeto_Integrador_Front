@@ -4,9 +4,11 @@
         <!--Teste editar e deletar-->
         <div class="container-md-12">
             <div class="row mt-5 d-flex justify-content-end">
-                <a [routerLink]="['/produto-edit', produto.id]" class="mr-2" ><button type="button" class="btn btn-primary">Editar</button></a>
+                <!--<a [routerLink]="['/produto-edit', produto.id]" class="mr-2" ><button type="button" class="btn btn-primary">Editar</button></a>
                 <a [routerLink]="['/produto-delete', produto.id]" href=""><button type="button" class="btn btn-danger">Deletar</button></a>
-                <!---->
+                -->
+
+                <a [routerLink]="['/produto-edit', produto.id]" href="" type="button" class="btn btn-primary mr-3">Editar</a>
                 <a [routerLink]="['/produto-delete', produto.id]" href="" type="button" class="btn btn-danger">Deletar</a>
             </div>
         </div>
