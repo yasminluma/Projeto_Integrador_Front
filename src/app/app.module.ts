@@ -16,6 +16,8 @@ import { ChatGeralComponent } from './chat-geral/chat-geral.component';
 import { MinhaContaComponent } from './minha-conta/minha-conta.component';
 import { SomosComponent } from './somos/somos.component';
 import { CategoriaComponent } from './categoria/categoria.component';
+import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
+import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { CategoriaComponent } from './categoria/categoria.component';
     ChatGeralComponent,
     MinhaContaComponent,
     SomosComponent,
-    CategoriaComponent
+    CategoriaComponent,
+    ProdutoEditComponent,
+    ProdutoDeleteComponent
   ],
   imports: [
     BrowserModule,

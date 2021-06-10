@@ -1,7 +1,12 @@
 .navbar{
-    background-color: #88D885;
+    background-color: #006B54;
 }
 
 a{
-    color: black;
+    color: rgb(255,255,255);
+}
+
+.logo{
+    width: 70px;
+    height: 70px;
 }
