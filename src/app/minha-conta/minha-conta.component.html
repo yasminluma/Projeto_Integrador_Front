@@ -1,74 +1,40 @@
-<nav class="navbar navbar-expand-lg ">
-  <a class="navbar-brand" href="#"><img src="https://i.imgur.com/DecAfeT.png" width="70px" height="70px"></a>    
-
-  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home<span class="sr-only">(página atual)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Produtos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Cadastrar produtos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Quem somos</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#">Minha conta</a>
-      </li>
-
-    </ul>  
-    
-  </div>
-</nav>
-
 <div class="container">
-    <div class="row">
-      <div class="col mt-5 mb-5">
-        <img src="https://i.imgur.com/fS4i0cC.jpg" alt="Imagem do user" class="rounded-circle" width="200px" height="200px">
-      </div>
+  <div class="row">
+    <div class="col mt-5 mb-5">
+      <img src="https://i.imgur.com/fS4i0cC.jpg" alt="Imagem do user" width="200px" height="150px"
+      class="img-fluid rounded-circle">
+    </div>
 
 <div class="col-9 mt-5 mb-5">
-    <h1 class="card-title">Perfil</h1>
-    <h6 class="card-subtitle mb-2 text-muted">Meus dados</h6>
+  <h1 class="card-title">Atualizar meu usuário</h1>
+  <h6 class="card-subtitle mb-2 text-muted">Meus dados</h6>
+  <br>
+<form>
+    <div class="form-group">
+      <label for="disabledTextInput">Nome</label>
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="Nome Completo">
+    </div>
+    <div class="form-group">
+      <label for="disabledSelect">E-mail</label>
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="email@efas.com">
+    </div>
+    <div class="form-group">
+      <label for="disabledSelect">Telefone</label>
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="(DDD) 99999-9999">
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck">
+      <label class="form-check-label" for="disabledFieldsetCheck"></label>
+        O telefone é meu WhatsApp.
+    </div>
     <br>
-    
-  <form>
-   
-      <b>
-      <div class="form-group">
-        <label for="textTransformX">Nome</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Nome Completo" >
-      </div>
-     
-        <div class="form-group">
-          <label for="exampleInputEmail1">Endereço de email</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
-          <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
-        </div>
+    <button type="submit" class="btn btn-success">Salvar</button>
 
-        <div class="form-group">
-          <label for="exampleInputPassword1">Senha</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
-        </div>
-      </b>
+</form>
 
-        <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">O número é o mesmo do WhatsApp.</label>
-        </div>
-
-      <br>
-      <h1 class="btn btn-success" >Salvar</h1>
-  
-  </form>
-
-<hr class="mt-6 mb-6">
 <b>
-  <p class="text-center mr-auto d-flex align-items-center">
-    <a class="text-dark" href="#">Sair da Conta</a>
-  </p>
+<hr class="mt-6 mb-6">
+<p class="text-center mr-auto d-flex align-items-center">
+   <a (click)='sair()' routerLink='sair'> Sair da Conta <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+</p>
 </b>

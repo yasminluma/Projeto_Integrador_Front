@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Produto } from '../model/Produto';
+import { Usuario } from '../model/Usuario';
+import { AuthService } from '../service/auth.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
@@ -14,10 +16,15 @@ export class InicioComponent implements OnInit {
 
   produto: Produto = new Produto()
   listaProdutos: Produto[]
+  idTema: number
+
+  user: Usuario = new Usuario()
+  idUser = environment.id
 
   constructor(
     private router: Router,
-    private produtoService:ProdutoService
+    private produtoService:ProdutoService,
+    private authService: AuthService
 
   ) { }
 
@@ -44,12 +51,17 @@ export class InicioComponent implements OnInit {
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
     this.produto = resp
 
-    alert('Tema cadastrado com sucesso!')
+  alert('Tema cadastrado com sucesso!')
     this.produto = new Produto()
     this.findAllProdutos()
     this.produto=new Produto()
-
     } )
+  }
+
+  findByIdUser(){
+    this.authService.getByIdUser(this.idUser).subscribe((resp: Usuario) => {
+      this.user = resp
+    })
   }
 
 }
