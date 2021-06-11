@@ -55,18 +55,21 @@
 
           <div class="form-group">
               <label for="categoria">Categoria do produto</label>
-              <select name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria' (change)='findByIdCategoria'>
-                  <option *ngFor='let item of listaCategoria' value="{{item.id}}">
-                    {{item.nome}}
-                  </option>
+              <select name="categoria" id="categoria" class="form-control" (change)='categoriaProduto($event)'  >
+                  <!--<option *ngFor='let item of listaCategoria' value="{{item.id}}">
+                    {{item.nome}} [(ngModel)]='idCategoria'  (change)='findByIdCategoria'
+                  </option>-->
+                  <option value="fruta">Frutas</option>
+                  <option value="legume">Legumes</option>
+                  <option value="verdura">Verduras</option>
               </select>
           </div>
 
           <div class="form-group">
-              <label for="linkImagemProduto">Link da imagem</label>
+              <label [(ngModel)]='produto.foto' for="linkImagemProduto">Link da imagem</label>
               <input type="text" class="form-control" id="imagemProduto" placeholder="Insira o link da imagem do produto">
           </div>
-          <!--[(ngModel)]='produto.foto'-->
+          <!---->
 
           <div class="form-group">
               <label [(ngModel)]='produto.observacao' for="descricao">Descrição do produto</label>
@@ -74,10 +77,10 @@
           </div>
 
           <div class="form-group">
-            <label for="whatsappProduto">Whatsapp (só número sem espaços)</label>
+            <label [(ngModel)]='usuario.celular' for="whatsappProduto">Whatsapp (só número sem espaços)</label>
             <input type="text" class="form-control" id="whatsappProduto" placeholder="55 DD XXXXX-XXXX">
         </div>
-        <!--[(ngModel)]='produto.celular'-->
+        <!---->
       </div>
 
       <div class="modal-footer">
