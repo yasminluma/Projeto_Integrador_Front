@@ -33,6 +33,15 @@ a{
  width: 300;
  height: 150; 
 }
+
+.text-titulo{
+  color:black
+  
+}
+.text-tm{
+ width: 300;
+ height: 150; 
+}
 .text-link{
   color:darkblue
 }
