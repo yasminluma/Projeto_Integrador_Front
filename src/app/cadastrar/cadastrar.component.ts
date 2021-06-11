@@ -3,6 +3,10 @@ import { Router } from '@angular/router';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 
+let email = document.querySelector('#email')
+let emailOK= false
+
+
 @Component({
   selector: 'app-cadastrar',
   templateUrl: './cadastrar.component.html',
@@ -35,6 +39,16 @@ confirmarSenha:string
           alert('Usuário cadastrado com sucesso!')
         })
       }
+      validaEmail() {
+        let txtEmail = document.querySelector('#email')
+        if(email.value.indexOf('@') == -1 || email.value.indexOf('.') ==-1 ) {
+            txtEmail.innerHTML = 'E-mail invalido'
+            txtEmail.style.color = 'red'
+        } else {
+            txtEmail.innerHTML = 'E-mail valido'
+            txtEmail.style.color = 'green'
+            emailOK = true
+      
     }
 
 }
