@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Produto } from '../model/Produto';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alert.service';
 import { AuthService } from '../service/auth.service';
 import { ProdutoService } from '../service/produto.service';
 
@@ -24,7 +25,8 @@ export class InicioComponent implements OnInit {
   constructor(
     private router: Router,
     private produtoService:ProdutoService,
-    private authService: AuthService
+    private authService: AuthService,
+    private alertas: AlertasService
 
   ) { }
 
@@ -34,7 +36,7 @@ export class InicioComponent implements OnInit {
 
   ngOnInit(){
     if(environment.token==''){
-      alert('Sua sessão expirou,faça o login novamente')
+      this.alertas.showAlertDanger('Sua sessão expirou,faça o login novamente')
       this.router.navigate(['/entrar'])
     }
 
@@ -51,7 +53,7 @@ export class InicioComponent implements OnInit {
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
     this.produto = resp
 
-  alert('Tema cadastrado com sucesso!')
+    this.alertas.showAlertSuccess('Tema cadastrado com sucesso!')
     this.produto = new Produto()
     this.findAllProdutos()
     this.produto=new Produto()

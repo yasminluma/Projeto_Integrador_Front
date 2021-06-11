@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alert.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
@@ -31,7 +32,8 @@ export class MenuComponent implements OnInit {
   constructor(
     private router: Router,
     private categoriaService: CategoriaService,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit(){
@@ -61,7 +63,7 @@ export class MenuComponent implements OnInit {
 
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
       this.produto = resp
-      alert('Postagem realizada com sucesso!')
+      this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
       this.produto = new Produto()
     })
   }

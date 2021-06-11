@@ -27,8 +27,9 @@ return this.http.post<UserLogin>('https://projefas.herokuapp.com/usuarios/logar'
   }
 
   getByIdUser(id: number): Observable<Usuario>{
-    return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`, this.token)
+    return this.http.get<Usuario>(`http://projefas.herokuapp.com/usuarios/${id}`, this.token)
   }
+
 
   logado(){
     let ok = false

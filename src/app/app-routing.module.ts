@@ -10,7 +10,7 @@ import { SomosComponent } from './somos/somos.component';
 import { FrutaComponent } from './fruta/fruta.component';
 import { LegumesComponent } from './legumes/legumes.component';
 import { VerdurasComponent } from './verduras/verduras.component';
-import { MinhaContaComponent } from './minha-conta/minha-conta.component';
+import { MinhaContaComponent } from './minha-conta-edit/minha-conta.component';
 
 const routes: Routes = [
 
@@ -28,7 +28,7 @@ const routes: Routes = [
   { path: 'produto/:id', component: ProdutoComponent },
   { path: 'produto-edit/:id', component: ProdutoEditComponent },
   { path: 'produto-delete/:id', component: ProdutoDeleteComponent },
-  { path: 'minha-conta/:id', component: MinhaContaComponent},
+  { path: 'minha-conta-edit/:id', component: MinhaContaComponent},
 ];
 
 
