@@ -20,11 +20,11 @@ const routes: Routes = [
   { path: 'cadastrar', component: CadastrarComponent },
   { path: 'inicio', component: InicioComponent },
   { path: 'fruta', component: FrutaComponent },
-  { path: 'minha-conta', component: MinhaContaComponent },
   { path: 'somos', component: SomosComponent },
   { path: 'legumes', component: LegumesComponent },
   { path: 'verduras', component: VerdurasComponent },
 
+  { path: 'minha-conta/:id', component: MinhaContaComponent },
   { path: 'produto/:id', component: ProdutoComponent },
   { path: 'produto-edit/:id', component: ProdutoEditComponent },
   { path: 'produto-delete/:id', component: ProdutoDeleteComponent }
