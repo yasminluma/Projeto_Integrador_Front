@@ -11,24 +11,38 @@ import { ProdutoService } from 'src/app/service/produto.service';
 export class ProdutoDeleteComponent implements OnInit {
 
   produto: Produto = new Produto()
-
+  idProduto: number
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    produtoService: ProdutoService
+    private produtoService: ProdutoService
   ) { }
 
-  ngOnInit() {
+  ngOnInit(){
     window.scroll(0,0)
 
-    
+    /*if(environment.token==''){
+      alert('Sua sessão expirou,faça o login novamente')
+      this.router.navigate(['/entrar'])
+    }*/
+
+    this.idProduto = this.route.snapshot.params['id']
+    this.findByIdProduto(this.idProduto)
   }
 
-  /*findByIdProduto(id:number){
+  findByIdProduto(id:number){
     this.produtoService.getByIdProduto(id).subscribe((resp: Produto)=>{
       this.produto = resp
     })
-  }*/
+  }
+
+  apagar(){
+    this.produtoService.deleteProduto(this.idProduto).subscribe(()=>{
+      alert('Produto apagado com sucesso!')
+      this.router.navigate([''])
+    })
+
+  }
 
 }
