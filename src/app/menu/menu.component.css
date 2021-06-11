@@ -1,8 +1,8 @@
-.navbar{
+.navbar, .modal-header, .modal-body, .modal-footer{
     background-color: #006B54;
 }
 
-a{
+a, h5, label{
     color: rgb(255,255,255);
 }
 
