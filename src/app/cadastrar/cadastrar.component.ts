@@ -19,12 +19,12 @@ export class CadastrarComponent implements OnInit {
 
 
   constructor(
-    private authService:AuthService,
-    private router:Router
+    private authService: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit() {
-    window.scroll(0,0)
+    window.scroll(0, 0)
   }
   confirmSenha(event: any){
     this.confirmarSenha= event.target.value
@@ -59,5 +59,6 @@ export class CadastrarComponent implements OnInit {
    }
 
 
+  }
 
 }
