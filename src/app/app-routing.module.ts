@@ -29,7 +29,7 @@ const routes: Routes = [
   { path: 'produto-edit/:id', component: ProdutoEditComponent },
   { path: 'produto-delete/:id', component: ProdutoDeleteComponent },
 
-  { path: 'minha-conta-edit/:id', component: MinhaContaComponent },
+  { path: 'minha-conta-edit/:id', component: MinhaContaComponent }
 
 ];
 

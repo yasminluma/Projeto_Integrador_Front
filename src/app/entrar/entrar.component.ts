@@ -20,7 +20,6 @@ export class EntrarComponent implements OnInit {
     private alertas: AlertasService
   ) { }
 
-
   ngOnInit() {
     window.scroll(0, 0)
   }
