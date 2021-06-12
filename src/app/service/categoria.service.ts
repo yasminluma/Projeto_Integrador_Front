@@ -20,6 +20,10 @@ export class CategoriaService {
     return this.http.get<Categoria[]>('https://projetoefas.herokuapp.com/categoria', this.token)
   }
 
+  getByNomeCategoria(nome: string): Observable<Categoria[]>{
+    return this.http.get<Categoria[]>(`https://projetoefas.herokuapp.com/categoria/nome/${nome}`, this.token)
+  }
+
   getByIdCategoria(id: number): Observable<Categoria>{
     return this.http.get<Categoria>(`https://projetoefas.herokuapp.com/categoria/${id}`,this.token)
   }

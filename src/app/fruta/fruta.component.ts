@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
-import { AlertasService } from '../service/alert.service';
 import { CategoriaService } from '../service/categoria.service';
 
 @Component({
@@ -12,11 +11,12 @@ import { CategoriaService } from '../service/categoria.service';
 })
 export class FrutaComponent implements OnInit {
 
-  categoria: Categoria = new Categoria()
+  categoria: Categoria = new Categoria
   listaCategorias: Categoria[]
+  nomeCategoria: string
 
   constructor(
-    private router:Router,
+    private router: Router,
     private categoriaService: CategoriaService
   ) { }
 
@@ -29,12 +29,22 @@ export class FrutaComponent implements OnInit {
     }
 
     this.getAllCategorias()
+
   }
 
-  getAllCategorias(){
+  getAllCategorias() {
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaCategorias = resp
     })
   }
 
+  findByNomeCategoria() {
+    if (this.nomeCategoria == '') {
+      this.getAllCategorias()
+    } else {
+      this.categoriaService.getByNomeCategoria(this.nomeCategoria).subscribe((resp: Categoria[]) => {
+        this.listaCategorias = resp
+      })
+    }
+  }
 }

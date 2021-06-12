@@ -1,128 +1,14 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12 p-0">
-            <br> <br>
-            <div class="container align-self-center p-0">
+<div class="container mb-5 mt-5" id='categorias'>
 
-                <p class="d-flex justify-content-center">Selecione o produto desejado:</p>
-                <br> <br>
+    <div class="tab-pane fade" id="postagemCategoria" role="tabpanel" aria-labelledby="nav-postagemCategoria-tab">
 
-                <div class="card-group p-0">
-
-                    <div class="p-3">
-                        <div class="card categoria rounded-circle border-0" style="width: 12rem;">
-                            <a routerLink="/produto/:id">
-                                <img class="card-img-top img-fluid" src="https://i.imgur.com/2ZDwPDu.jpg"
-                                    alt="Imagem de capa do card"></a>
-                            <div class="card-body"></div>
-                            <br>
-                            <p class="d-flex justify-content-center">Pimentão</p>
-                        </div>
-                    </div>
-
-                    <div class="p-3">
-                        <div class="card categoria rounded-circle border-0" style="width: 12rem;">
-                            <a routerLink="/produto/:id">
-                                <img class="card-img-top img-fluid" src="https://i.imgur.com/e7RKpY5.jpg"
-                                    alt="Imagem de capa do card"></a>
-                            <div class="card-body"></div>
-                            <br>
-                            <p class="d-flex justify-content-center">Ervilha</p>
-                        </div>
-                    </div>
-
-                    <div class="p-3">
-                        <div class="card categoria rounded-circle border-0" style="width: 12rem;">
-                            <a routerLink="/produto/:id">
-                                <img class="card-img-top img-fluid" src="https://i.imgur.com/gxkpqNh.jpg"
-                                    alt="Imagem de capa do card"></a>
-                            <div class="card-body"></div>
-                            <br>
-                            <p class="d-flex justify-content-center">Cenoura</p>
-                        </div>
-                    </div>
-
-                    <div class="p-3">
-                        <div class="card categoria rounded-circle border-0" style="width: 12rem;">
-                            <a routerLink="/produto/:id">
-                                <img class="card-img-top img-fluid" src="https://i.imgur.com/OksdW8U.jpg"
-                                    alt="Imagem de capa do card"></a>
-                            <div class="card-body"></div>
-                            <br>
-                            <p class="d-flex justify-content-center">Beterraba</p>
-                        </div>
-                    </div>
-
-                    <div class="p-3">
-                        <div class="card categoria rounded-circle border-0" style="width: 12rem;">
-                            <a routerLink="/produto/:id">
-                                <img class="card-img-top img-fluid" src="https://i.imgur.com/wfrj2LZ.jpg"
-                                    alt="Imagem de capa do card"></a>
-                            <div class="card-body"></div>
-                            <br>
-                            <p class="d-flex justify-content-center">Beringela</p>
-                        </div>
-                    </div>
-
-                    <div class="p-3">
-                        <div class="card categoria rounded-circle border-0" style="width: 12rem;">
-                            <a routerLink="/produto/:id">
-                                <img class="card-img-top img-fluid" src="https://i.imgur.com/5bd2yVD.jpg"
-                                    alt="Imagem de capa do card"></a>
-                            <div class="card-body"></div>
-                            <br>
-                            <p class="d-flex justify-content-center">Batata doce</p>
-                        </div>
-                    </div>
-
-                    <div class="p-3">
-                        <div class="card categoria rounded-circle border-0" style="width: 12rem;">
-                            <a routerLink="/produto/:id">
-                                <img class="card-img-top img-fluid" src="https://i.imgur.com/G2VhQsz.jpg"
-                                    alt="Imagem de capa do card"></a>
-                            <div class="card-body"></div>
-                            <br>
-                            <p class="d-flex justify-content-center">Aspargo</p>
-                        </div>
-                    </div>
-
-                    <div class="p-3">
-                        <div class="card categoria rounded-circle border-0" style="width: 12rem;">
-                            <a routerLink="/produto/:id">
-                                <img class="card-img-top img-fluid" src="https://i.imgur.com/EdNtCej.jpg"
-                                    alt="Imagem de capa do card"></a>
-                            <div class="card-body"></div>
-                            <br>
-                            <p class="d-flex justify-content-center">Brócolis</p>
-                        </div>
-                    </div>
-
-                    <div class="p-3">
-                        <div class="card categoria rounded-circle border-0" style="width: 12rem;">
-                            <a routerLink="/produto/:id">
-                                <img class="card-img-top img-fluid" src="https://i.imgur.com/mGdZX8d.jpg"
-                                    alt="Imagem de capa do card"></a>
-                            <div class="card-body"></div>
-                            <br>
-                            <p class="d-flex justify-content-center">Abobrinha</p>
-                        </div>
-                    </div>
-
-                    <div class="p-3">
-                        <div class="card categoria rounded-circle border-0" style="width: 12rem;">
-                            <a routerLink="/produto/:id">
-                                <img class="card-img-top img-fluid" src="https://i.imgur.com/WFCF5ls.jpg"
-                                    alt="Imagem de capa do card"></a>
-                            <div class="card-body"></div>
-                            <br>
-                            <p class="d-flex justify-content-center">Abóbora</p>
-                        </div>
-                    </div>
+        <div class="row d-flex justify-content-center mt-5 mb-5">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <input [(ngModel)]='nomeCategoria' type="text" class="form-control" id="titulo" placeholder="Digite um produto para pesquisar">
                 </div>
             </div>
         </div>
+
     </div>
-</div>
-<div class="d-flex justify-content-end">
-    Imagens ilustrativas, não correspondentes a realidade dos produtos!
 </div>
