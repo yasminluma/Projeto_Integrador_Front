@@ -10,9 +10,12 @@ import { AuthService } from '../service/auth.service';
 })
 export class CadastrarComponent implements OnInit {
 
-user:Usuario=new Usuario
-confirmarSenha:string
-
+  user:Usuario=new Usuario
+  confirmarSenha:string
+  campoNome:string
+  campoEmail:string
+  campoSenha:string
+  campoCelular:string
 
 
   constructor(
@@ -25,18 +28,36 @@ confirmarSenha:string
   }
   confirmSenha(event: any){
     this.confirmarSenha= event.target.value
-    }
-    cadastrar(){
-      if (this.user.senha != this.confirmarSenha) {
-        alert('As senhas devem ser iguais')
-      } else {
-        this.authService.cadastrar(this.user).subscribe((resp: Usuario) => {
-          this.user = resp
-          this.router.navigate(['/entrar'])
-          alert('Usuário cadastrado com sucesso!')
-        })
-      }
-    }
+  }
+
+  validaNome(event:any){
+    this.campoNome= event.target.value
+  }
+
+  validaEmail(event:any){
+    this.campoEmail= event.target.value
+  }
+
+  validaSenha(event:any){
+    this.campoSenha= event.target.value
+  }
+
+  validaCelular(event:any){
+    this.campoCelular= event.target.value
+  }
+
+  cadastrar(){
+   if (this.user.senha != this.confirmarSenha) {
+     alert('As senhas devem ser iguais')
+    } else {
+      this.authService.cadastrar(this.user).subscribe((resp: Usuario) => {
+        this.user = resp
+        this.router.navigate(['/entrar'])
+        alert('Usuário cadastrado com sucesso!')
+      })
+     }
+   }
+
 
 
 }
