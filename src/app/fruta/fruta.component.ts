@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { Categoria } from '../model/Categoria';
 import { AlertasService } from '../service/alert.service';
+import { CategoriaService } from '../service/categoria.service';
 
 @Component({
   selector: 'app-fruta',
@@ -10,16 +12,29 @@ import { AlertasService } from '../service/alert.service';
 })
 export class FrutaComponent implements OnInit {
 
+  categoria: Categoria = new Categoria()
+  listaCategorias: Categoria[]
+
   constructor(
     private router:Router,
-    private alertas:AlertasService,
+    private categoriaService: CategoriaService
   ) { }
 
   ngOnInit() {
-    if(environment.token==''){
-      this.alertas.showAlertDanger('Sua sessão expirou,faça o login novamente')
+
+    window.scroll(0, 0)
+
+    if (environment.token == '') {
       this.router.navigate(['/entrar'])
     }
+
+    this.getAllCategorias()
+  }
+
+  getAllCategorias(){
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
+      this.listaCategorias = resp
+    })
   }
 
 }

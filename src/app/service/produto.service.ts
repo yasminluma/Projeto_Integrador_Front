@@ -16,22 +16,22 @@ export class ProdutoService {
   }
 
   getAllProduto(): Observable<Produto[]>{
-    return this.http.get<Produto[]>('https://projefas.herokuapp.com/', this.token)
+    return this.http.get<Produto[]>('https://projetoefas.herokuapp.com/produto', this.token)
   }
 
   getByIdProduto(id:number):Observable<Produto>{
-    return this.http.get<Produto>(`https://projefas.herokuapp.com/produto/${id}`,this.token)
+    return this.http.get<Produto>(`https://projetoefas.herokuapp.com/produto/${id}`,this.token)
     }
 
   postProduto(produto: Produto): Observable<Produto>{
-    return this.http.post<Produto>('https://projefas.herokuapp.com/produto', produto, this.token)
+    return this.http.post<Produto>('https://projetoefas.herokuapp.com/produto', produto, this.token)
   }
 
   putProduto(produto: Produto): Observable<Produto>{
-    return this.http.put<Produto>('https://projefas.herokuapp.com/produto', produto, this.token)
+    return this.http.put<Produto>('https://projetoefas.herokuapp.com/produto', produto, this.token)
   }
 
   deleteProduto(id:number): Observable<Produto>{
-    return this.http.delete<Produto>(`https://projefas.herokuapp.com/produto/${id}`,this.token)
+    return this.http.delete<Produto>(`https://projetoefas.herokuapp.com/produto/${id}`,this.token)
   }
 }
