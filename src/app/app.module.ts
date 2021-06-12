@@ -24,6 +24,8 @@ import { AlertasComponent } from './alertas/alertas.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { OrderModule } from 'ngx-order-pipe';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { CategoriasComponent } from './categoria/categorias.component';
+import { CategoriaComponent } from './categoria/categoria.component';
 
 
 @NgModule({
@@ -54,7 +56,9 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     FrutaComponent,
     LegumesComponent,
     VerdurasComponent,
-    AlertasComponent
+    AlertasComponent,
+    CategoriasComponent,
+    CategoriaComponent
 
   ],
 
