@@ -39,8 +39,6 @@ export class InicioComponent implements OnInit {
       this.alertas.showAlertDanger('Sua sessão expirou,faça o login novamente')
       this.router.navigate(['/entrar'])
     }
-
-    this.findAllProdutos()
   }
 
   findAllProdutos(){
@@ -53,7 +51,7 @@ export class InicioComponent implements OnInit {
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
     this.produto = resp
 
-    this.alertas.showAlertSuccess('Tema cadastrado com sucesso!')
+    this.alertas.showAlertSuccess('Produto cadastrado com sucesso!')
     this.produto = new Produto()
     this.findAllProdutos()
     this.produto=new Produto()
