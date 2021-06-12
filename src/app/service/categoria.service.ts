@@ -17,14 +17,14 @@ export class CategoriaService {
   }
 
   getAllCategoria(): Observable<Categoria[]>{
-    return this.http.get<Categoria[]>('https://projefas.herokuapp.com/categoria', this.token)
+    return this.http.get<Categoria[]>('https://projetoefas.herokuapp.com/categoria', this.token)
   }
 
   getByIdCategoria(id: number): Observable<Categoria>{
-    return this.http.get<Categoria>(`https://projefas.herokuapp.com/categoria/${id}`,this.token)
+    return this.http.get<Categoria>(`https://projetoefas.herokuapp.com/categoria/${id}`,this.token)
   }
 
   postCategoria(categoria: Categoria): Observable<Categoria>{
-    return this.http.post<Categoria>('https://projefas.herokuapp.com/categoria', categoria, this.token)
+    return this.http.post<Categoria>('https://projetoefas.herokuapp.com/categoria', categoria, this.token)
   }
 }

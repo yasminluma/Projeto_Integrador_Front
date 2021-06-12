@@ -61,20 +61,16 @@
                 </div>
 
                 <div class="form-group">
-                    <label [(ngModel)]='produto.foto' ngDefaultControl for="linkImagemProduto">Link da imagem</label>
-                    <input type="text" name="imagemProduto" class="form-control" id="imagemProduto" placeholder="Insira o link da imagem do produto">
+                    <label ngDefaultControl for="linkImagemProduto">Link da imagem</label>
+                    <input [(ngModel)]='produto.foto' type="text" name="imagemProduto" class="form-control" id="imagemProduto" placeholder="Insira o link da imagem do produto">
                 </div>
                 <!---->
 
                 <div class="form-group">
-                    <label [(ngModel)]='produto.observacao' ngDefaultControl for="descricao">Descrição do produto</label>
-                    <textarea class="form-control" name="descricao" id="descricao" rows="5"></textarea>
+                    <label ngDefaultControl for="descricao">Descrição do produto</label>
+                    <textarea [(ngModel)]='produto.observacao' class="form-control" name="descricao" id="descricao" rows="5"></textarea>
                 </div>
 
-                <div class="form-group">
-                    <label [(ngModel)]='usuario.celular' ngDefaultControl for="whatsappProduto">Whatsapp (só número sem espaços)</label>
-                    <input type="text" name="whatsappProduto" class="form-control" id="whatsappProduto" placeholder="55 DD XXXXX-XXXX">
-                </div>
                 <!---->
             </div>
 
