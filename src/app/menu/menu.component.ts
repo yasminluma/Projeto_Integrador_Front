@@ -6,6 +6,7 @@ import { Produto } from '../model/Produto';
 import { Usuario } from '../model/Usuario';
 import { ProdutoService } from '../service/produto.service';
 
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -44,7 +45,7 @@ export class MenuComponent implements OnInit {
 
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
       this.produto = resp
-      alert('Postagem realizada com sucesso!')
+      this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
       this.produto = new Produto()
     })
   }
