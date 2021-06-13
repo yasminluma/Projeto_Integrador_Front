@@ -1,46 +1,30 @@
-.navbar {
-    background-color: #006B54;
+.card{
+  background-color: #006B54;
+  border-radius: 1%;
 }
 
-a {
-    color: rgb(255, 255, 255);
+.fotoImpar{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
 
-.logo {
-    width: 70px;
-    height: 70px;
+.fotoPar{
+  
+  border-radius: 50%;
 }
 
-.logo {
-    width: 70px;
-    height: 70px;
+.nome{
+  font-weight: bold;
+  font-size: 25pt;
+  color: white;
 }
 
-.img-1 {
-    width: 50px;
-    Height: 250px;
-    Top: 40px;
-    Left: 80px;
+.descricao{
+  font-size: 13pt;
+  color: white;
 }
 
-.text-titulo {
-    color: black
-}
-
-.text-tm {
-    width: 300;
-    height: 150;
-}
-
-.text-titulo {
-    color: black
-}
-
-.text-tm {
-    width: 300;
-    height: 150;
-}
-
-.text-link {
-    color: darkblue
+.text-link{
+  color: rgb(133, 195, 253);
 }
