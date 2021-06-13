@@ -63,11 +63,7 @@ export class MenuComponent implements OnInit {
     
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
       this.produto = resp
-<<<<<<< HEAD
-      //this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
-=======
       alert('Postagem realizada com sucesso!')
->>>>>>> 09663b91214c76c4daf6ebad9dc0232ce24a1243
       this.produto = new Produto()
     })
   }

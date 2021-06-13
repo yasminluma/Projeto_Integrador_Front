@@ -47,10 +47,6 @@ export class MinhaContaComponent implements OnInit {
   }
 
   atualizar(){
-<<<<<<< HEAD
-    //this.user.tipo = this.tipoUsuario
-=======
->>>>>>> 09663b91214c76c4daf6ebad9dc0232ce24a1243
 
     if(this.user.senha != this.confirmarSenha) {
       this.alertas.showAlertDanger('As senhas estão incorretas.')
