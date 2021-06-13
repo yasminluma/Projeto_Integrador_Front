@@ -28,6 +28,10 @@ export class MinhaContaComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0,0)
+    if(environment.token==''){
+      this.alertas.showAlertDanger('Sua sessão expirou,faça o login novamente')
+      this.router.navigate(['/entrar'])
+    }
 
     this.idUser = this.route.snapshot.params['id'] 
     this.findByIdUser(this.idUser)
@@ -43,7 +47,6 @@ export class MinhaContaComponent implements OnInit {
   }
 
   atualizar(){
-    this.user.tipo = this.tipoUsuario
 
     if(this.user.senha != this.confirmarSenha) {
       this.alertas.showAlertDanger('As senhas estão incorretas.')

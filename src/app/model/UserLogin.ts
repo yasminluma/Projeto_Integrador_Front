@@ -5,4 +5,5 @@ export class UserLogin{
     public senha: string
     public id: number
     public tipo: string
+    public celular:number
 }

@@ -19,15 +19,15 @@ export class AuthService {
   }
 
   entrar(userLogin: UserLogin): Observable<UserLogin>{
-return this.http.post<UserLogin>('https://projefas.herokuapp.com/usuarios/logar', userLogin)
+return this.http.post<UserLogin>(' https://projetoefas.herokuapp.com/usuarios/logar', userLogin)
   }
 
   cadastrar(usuario : Usuario):Observable<Usuario> {
-    return this.http.post<Usuario>('https://projefas.herokuapp.com/usuarios/cadastrar', usuario)
+    return this.http.post<Usuario>(' https://projetoefas.herokuapp.com/usuarios/cadastrar', usuario)
   }
 
   getByIdUser(id: number): Observable<Usuario>{
-    return this.http.get<Usuario>(`http://projefas.herokuapp.com/usuarios/${id}`, this.token)
+    return this.http.get<Usuario>(` https://projetoefas.herokuapp.com/usuarios/${id}`, this.token)
   }
 
 

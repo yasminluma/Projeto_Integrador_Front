@@ -1,11 +1,9 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { Produto } from '../model/Produto';
-import { Usuario } from '../model/Usuario';
-import { AlertasService } from '../service/alert.service';
-import { AuthService } from '../service/auth.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
@@ -17,16 +15,10 @@ export class InicioComponent implements OnInit {
 
   produto: Produto = new Produto()
   listaProdutos: Produto[]
-  idTema: number
-
-  user: Usuario = new Usuario()
-  idUser = environment.id
 
   constructor(
     private router: Router,
-    private produtoService:ProdutoService,
-    private authService: AuthService,
-    private alertas: AlertasService
+    private produtoService:ProdutoService
 
   ) { }
 
@@ -36,9 +28,11 @@ export class InicioComponent implements OnInit {
 
   ngOnInit(){
     if(environment.token==''){
-      this.alertas.showAlertDanger('Sua sessão expirou,faça o login novamente')
+      alert('Sua sessão expirou,faça o login novamente')
       this.router.navigate(['/entrar'])
     }
+
+    this.findAllProdutos()
   }
 
   findAllProdutos(){
@@ -51,17 +45,12 @@ export class InicioComponent implements OnInit {
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
     this.produto = resp
 
-    this.alertas.showAlertSuccess('Produto cadastrado com sucesso!')
+    alert('Tema cadastrado com sucesso!')
     this.produto = new Produto()
     this.findAllProdutos()
     this.produto=new Produto()
-    } )
-  }
 
-  findByIdUser(){
-    this.authService.getByIdUser(this.idUser).subscribe((resp: Usuario) => {
-      this.user = resp
-    })
+    } )
   }
 
 }

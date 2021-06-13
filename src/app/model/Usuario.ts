@@ -9,5 +9,5 @@ export class Usuario{
     public produtos: Produto[]
     public mensagemRecebida: Mensagem[]
     public mensagemEnviada: Mensagem[]
-    public tipo: string
+    public celular:number
 }

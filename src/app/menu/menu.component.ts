@@ -15,42 +15,42 @@ import { ProdutoService } from '../service/produto.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  
-  nome = environment.nome
-  id = environment.id
-  
 
   usuario: Usuario = new Usuario()
-  //idUsuario: environment.id
+  idUsuario: number = environment.id
 
   produto: Produto = new Produto()
 
   categoria: Categoria = new Categoria()
   idCategoria: number
   listaCategoria: Categoria[]
+  alertas:AlertasService
 
   constructor(
     private router: Router,
-    private categoriaService: CategoriaService,
     private produtoService: ProdutoService,
-    private alertas: AlertasService
+    private categoriaService:CategoriaService
   ) { }
 
   ngOnInit(){
     window.scroll(0,0)
 
-    this.getAllCategoria
+    this.getAllCategoria()
+  }
+
+  categoriaProduto(event: any){
+    this.categoria = event.target.value
   }
 
   getAllCategoria(){
-    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[])=>{
+    this.categoriaService.getAllCategoria().subscribe((resp:Categoria[])=>{
       this.listaCategoria = resp
     })
-  }
+  } 
 
   findByIdCategoria(){
     this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp:Categoria)=>{
-      this.categoria = resp
+      this.categoria=resp
     })
   }
 
@@ -58,12 +58,12 @@ export class MenuComponent implements OnInit {
     this.categoria.id = this.idCategoria
     this.produto.categoria = this.categoria
 
-    //this.usuario.id = this.idUsuario
+    this.usuario.id = this.idUsuario
     this.produto.usuario = this.usuario
-
+    
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
       this.produto = resp
-      this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
+      alert('Postagem realizada com sucesso!')
       this.produto = new Produto()
     })
   }
