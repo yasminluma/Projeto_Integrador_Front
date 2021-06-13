@@ -4,6 +4,8 @@ import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alert.service';
+import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
 
@@ -22,18 +24,34 @@ export class MenuComponent implements OnInit {
   categoria: Categoria = new Categoria()
   idCategoria: number
   listaCategoria: Categoria[]
+  alertas:AlertasService
 
   constructor(
     private router: Router,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private categoriaService:CategoriaService
   ) { }
 
   ngOnInit(){
     window.scroll(0,0)
+
+    this.getAllCategoria()
   }
 
   categoriaProduto(event: any){
     this.categoria = event.target.value
+  }
+
+  getAllCategoria(){
+    this.categoriaService.getAllCategoria().subscribe((resp:Categoria[])=>{
+      this.listaCategoria = resp
+    })
+  } 
+
+  findByIdCategoria(){
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp:Categoria)=>{
+      this.categoria=resp
+    })
   }
 
   publicar(){
@@ -42,10 +60,10 @@ export class MenuComponent implements OnInit {
 
     this.usuario.id = this.idUsuario
     this.produto.usuario = this.usuario
-
+    
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
       this.produto = resp
-      this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
+      alert('Postagem realizada com sucesso!')
       this.produto = new Produto()
     })
   }
