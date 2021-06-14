@@ -20,12 +20,13 @@
 .example1 {
     border-radius: 15px 800px 30px;
     width: 350px;
-    height: 590px;
+    height: 587px;
     background-color: rgba(255, 255, 255, 0.815);
 }
 
 .campos {
     width: 250px;
+    margin: 50px;
 }
 
 .btn-entrar {

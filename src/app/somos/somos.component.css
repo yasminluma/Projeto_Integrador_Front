@@ -1,22 +1,30 @@
-.img-1 {
-  width: 50px;
-
-  Height: 250px;
-
-  Top: 40px;
-
-  Left: 80px;
-
+.card{
+  background-color: #006B54;
+  border-radius: 1%;
 }
 
-.text-titulo{
-  color:black
+.fotoImpar{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.fotoPar{
   
+  border-radius: 50%;
 }
-.text-tm{
- width: 300;
- height: 150; 
+
+.nome{
+  font-weight: bold;
+  font-size: 25pt;
+  color: white;
 }
+
+.descricao{
+  font-size: 13pt;
+  color: white;
+}
+
 .text-link{
-  color:darkblue
+  color: rgb(133, 195, 253);
 }
