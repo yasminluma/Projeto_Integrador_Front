@@ -14,8 +14,9 @@
     padding: 5pt;
 }
 
-.fs-14{
+.cont{
+        
+    font-weight: bold;
     font-size: 14pt;
-    font-family: 'Noto Sans', sans-serif;
-
+    font-family: monospace;
 }
