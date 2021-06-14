@@ -4,8 +4,6 @@
 }
 
 .fotoImpar{
-  width: 200px;
-  height: 200px;
   border-radius: 50%;
 }
 
@@ -16,7 +14,7 @@
 
 .nome{
   font-weight: bold;
-  font-size: 25pt;
+  font-size: 23pt;
   color: white;
 }
 
@@ -25,6 +23,7 @@
   color: white;
 }
 
-.text-link{
+.text-link, p{
   color: rgb(133, 195, 253);
+  font-size: 10;
 }

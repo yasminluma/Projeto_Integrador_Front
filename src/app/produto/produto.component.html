@@ -19,7 +19,7 @@
             <div class="row d-flex justify-content-center">
                 <div class="container-fluid " >
                     <div class="d-flex justify-content-center">
-                        <img src="" class="img-fluid fotoProduto" alt="Imagem responsiva">
+                        <img src="{{produto.foto}}" class="img-fluid fotoProduto" alt="Imagem responsiva">
                     </div>
                     <!--{{produto.foto}}-->
                 </div>
@@ -34,23 +34,30 @@
             <div class="row mt-5">
                 <div class="col-md-6">
                     <div class="container d-flex justify-content-start">
-                        <p class="nomeProduto">nome</p>
+                        <p class="nomeProduto">{{produto.nome}}</p>
                     </div>
-                    <!--{{produto.nome}}-->
                 </div>
 
                 <div class="col-md-6">
                     <div class="container d-flex justify-content-end">
-                       <p class="valorProduto">preço</p>
+                       <p class="valorProduto">$ {{produto.preco}}</p>
                     </div>
-                    <!--{{produto.preco}}-->
+
 
                     <div class="row">
                         <div class="col-md-12">
                             <div class="container d-flex justify-content-end">
-                                <p class="publicacaoProduto">Data da publicação</p> 
+                                <div class="row">
+                                    <small class="mr-3">Data de publicação</small>
+                                </div>
                             </div>
-                            <!--{{produto.data}}-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="container d-flex justify-content-end">
+                                <p class="publicacaoProduto">{{produto.date | date:'dd/MM/yyyy'}} as {{produto.date | date:'HH:mm'}}</p> 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -64,7 +71,7 @@
         <div class="col-md-6 d-flex justify-content-start mt-2">
             <div class="row">
                 <div class="col-md-12">
-                    <p>descricao</p>
+                    <p>{{produto.observacao}}</p>
                 </div>
             </div>
             <!--{{observacao}}-->
@@ -76,7 +83,6 @@
         <!--Contato com vendedore-->
         <div class="col-md-12 d-flex justify-content-end mt-3 ">
             <a class="mr-2" href="http://api.whatsapp.com/send?phone={{usuario.celular}}." target="_blank"> <button type="button" class="btn btn-contato" >Whatsapp</button></a>
-            <!--{{usuario.celular}}-->
 
             <a href="{{usuario.email}}" target="_blank"> <button type="button" class="btn btn-contato lm-2" >Email</button></a>
         </div>
@@ -108,3 +114,59 @@
 
     </div>
 </div>
+<!--[routerLink]="['/produto-edit', produto.id]" href=""-->
+
+
+<!--
+<div class="modalEditar fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Produto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label for="nome">Nome do produto</label>
+                    <input [(ngModel)]='produto.nome' ngDefaultControl type="text" name="nomeProduto" class="form-control" id="nomeProduto" placeholder="Insira o nome do produto">
+                </div>
+
+                <div class="form-group">
+                    <label for="preco">Preço do produto</label>
+                    <input [(ngModel)]='produto.preco' ngDefaultControl type="text" name="precoProduto" class="form-control" id="precoProduto" placeholder="Insira o preço do produto">
+                </div>
+
+                <div class="form-group">
+                    <label for="categoria">Categoria do produto</label>
+                    <select name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria' (change)='findByIdCategoria()'>
+                  <option *ngFor='let item of listaCategoria' value="{{item.id}}">{{item.nome}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label ngDefaultControl for="linkImagemProduto">Link da imagem</label>
+                    <input [(ngModel)]='produto.foto' type="text" name="imagemProduto" class="form-control" id="imagemProduto" placeholder="Insira o link da imagem do produto">
+                </div>
+                
+
+                <div class="form-group">
+                    <label ngDefaultControl for="descricao">Descrição do produto</label>
+                    <textarea [(ngModel)]='produto.observacao' class="form-control" name="descricao" id="descricao" rows="5"></textarea>
+                </div>
+
+                
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" (click)='editar()' data-dismiss="modal">Editar</button>
+            </div>
+        </div>
+    </div>
+</div>
+-->
