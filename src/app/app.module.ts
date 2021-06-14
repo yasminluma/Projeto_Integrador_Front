@@ -12,7 +12,6 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ProdutoComponent } from './produto/produto.component';
-import { ChatGeralComponent } from './chat-geral/chat-geral.component';
 import { MinhaContaComponent } from './minha-conta-edit/minha-conta.component';
 import { SomosComponent } from './somos/somos.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
@@ -36,14 +35,14 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
     InicioComponent,
     ProdutoComponent,
-    ChatGeralComponent,
+    
 
 
     SomosComponent,
 
     InicioComponent,
     ProdutoComponent,
-    ChatGeralComponent,
+    
     SomosComponent,
     FrutaComponent,
 

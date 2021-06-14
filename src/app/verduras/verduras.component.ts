@@ -26,7 +26,7 @@ export class VerdurasComponent implements OnInit {
 
   produto: Produto = new Produto
   listaProdutos: Produto[]
-  tituloProd: string
+  tituloProd: string =''
 
   key = 'data'
   reverse = true
