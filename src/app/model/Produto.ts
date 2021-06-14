@@ -1,7 +1,7 @@
 import { Categoria } from "./Categoria"
 import { Usuario } from "./Usuario"
 
-export class Produto{
+export class Produto {
     public id: number
     public nome:string
     public preco:number
