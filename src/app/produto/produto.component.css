@@ -1,52 +1,50 @@
-.fotoProduto{
+.fotoProduto {
     width: 700px;
     height: 500px;
 }
 
-.nomeProduto{
+.nomeProduto {
     font-weight: bold;
     font-size: 35pt;
 }
 
-.valorProduto{
+.valorProduto {
     font-weight: bold;
     font-size: 30pt;
 }
 
-.fotoVendedore{
+.fotoVendedore {
     width: 200px;
     height: 200px;
     border-radius: 50%;
 }
 
-.fundoVendedore{
+.fundoVendedore {
     background-color: #006B54;
 }
 
-.nomeVendedore{
+.nomeVendedore {
     font-weight: bold;
     font-size: 25pt;
 }
 
-.textoCard{
+.textoCard {
     color: white;
 }
 
-
-
-.btn-editar{
+.btn-editar {
     color: #fff;
     background-color: #28a745;
     border-color: #28a745;
 }
 
-.btn-deletar{
+.btn-deletar {
     color: rgb(99, 95, 95);
     border: 2px solid #F9960E;
     background-color: #FCB808;
 }
 
-.btn-contato{
+.btn-contato {
     color: white;
     background-color: #006B54;
 }
