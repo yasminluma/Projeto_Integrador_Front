@@ -11,5 +11,8 @@
 }
 
 .cont{
-    font-family: 'Raleway', sans-serif;
+        
+    font-weight: bold;
+    font-size: 14pt;
+    font-family: monospace;
 }

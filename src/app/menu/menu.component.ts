@@ -20,6 +20,8 @@ export class MenuComponent implements OnInit {
   idUsuario: number = environment.id
 
   produto: Produto = new Produto()
+  listaProdutos: Produto[]
+  tituloProd: string
 
   categoria: Categoria = new Categoria()
   idCategoria: number
@@ -36,6 +38,7 @@ export class MenuComponent implements OnInit {
     window.scroll(0,0)
 
     this.getAllCategoria()
+    this.getAllProduto()
   }
 
   categoriaProduto(event: any){
@@ -54,6 +57,12 @@ export class MenuComponent implements OnInit {
     })
   }
 
+  getAllProduto() {
+    this.produtoService.getAllProduto().subscribe((resp: Produto[]) => {
+      this.listaProdutos = resp
+    })
+  }
+
   publicar(){
     this.categoria.id = this.idCategoria
     this.produto.categoria = this.categoria
@@ -65,6 +74,7 @@ export class MenuComponent implements OnInit {
       this.produto = resp
       alert('Postagem realizada com sucesso!')
       this.produto = new Produto()
+      this.getAllProduto()
     })
   }
 }

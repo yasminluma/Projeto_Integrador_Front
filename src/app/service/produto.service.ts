@@ -9,29 +9,33 @@ import { Produto } from '../model/Produto';
 })
 export class ProdutoService {
 
-  constructor( private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   token = {
-    headers:new HttpHeaders().set('Authorization', environment.token)
+    headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
-  getAllProduto(): Observable<Produto[]>{
+  getAllProduto(): Observable<Produto[]> {
     return this.http.get<Produto[]>('https://projetoefas.herokuapp.com/produto', this.token)
   }
 
-  getByIdProduto(id:number):Observable<Produto>{
-    return this.http.get<Produto>(`https://projetoefas.herokuapp.com/produto/${id}`,this.token)
-    }
+  getByIdProduto(id: number): Observable<Produto> {
+    return this.http.get<Produto>(`https://projetoefas.herokuapp.com/produto/${id}`, this.token)
+  }
 
-  postProduto(produto: Produto): Observable<Produto>{
+  getByNomeProduto(nome: string): Observable<Produto[]> {
+    return this.http.get<Produto[]>(`https://projetoefas.herokuapp.com/produto/${nome}`, this.token)
+  }
+
+  postProduto(produto: Produto): Observable<Produto> {
     return this.http.post<Produto>('https://projetoefas.herokuapp.com/produto', produto, this.token)
   }
 
-  putProduto(produto: Produto): Observable<Produto>{
+  putProduto(produto: Produto): Observable<Produto> {
     return this.http.put<Produto>('https://projetoefas.herokuapp.com/produto', produto, this.token)
   }
 
-  deleteProduto(id:number): Observable<Produto>{
-    return this.http.delete<Produto>(`https://projetoefas.herokuapp.com/produto/${id}`,this.token)
+  deleteProduto(id: number): Observable<Produto> {
+    return this.http.delete<Produto>(`https://projetoefas.herokuapp.com/produto/${id}`, this.token)
   }
 }
