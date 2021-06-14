@@ -30,3 +30,10 @@
 .fotoVendedore{
     border-radius: 50%;
 }
+
+.cont{
+        
+    font-weight: bold;
+    font-size: 14pt;
+    font-family: monospace;
+}
