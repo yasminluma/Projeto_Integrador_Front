@@ -12,7 +12,6 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ProdutoComponent } from './produto/produto.component';
-import { MinhaContaComponent } from './minha-conta-edit/minha-conta.component';
 import { SomosComponent } from './somos/somos.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
@@ -23,6 +22,7 @@ import { AlertasComponent } from './alertas/alertas.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { OrderModule } from 'ngx-order-pipe';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { MinhaContaComponent } from './minha-conta/minha-conta.component';
 
 
 @NgModule({
@@ -32,21 +32,12 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     RodapeComponent,
     EntrarComponent,
     CadastrarComponent,
-
-    InicioComponent,
-    ProdutoComponent,
-    
-
-
-    SomosComponent,
-
-    InicioComponent,
-    ProdutoComponent,
-    
-    SomosComponent,
-    FrutaComponent,
-
     MinhaContaComponent,
+
+    InicioComponent,
+    ProdutoComponent,
+
+  
     SomosComponent,
     ProdutoEditComponent,
     ProdutoDeleteComponent,
