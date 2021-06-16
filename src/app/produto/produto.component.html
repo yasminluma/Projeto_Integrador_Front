@@ -3,7 +3,7 @@
 
         <!--Teste editar e deletar-->
         <div class="container-md-12">
-            <div class="row mt-5 d-flex justify-content-end">
+            <div *ngIf='autor()' class="row mt-5 d-flex justify-content-end">
                 <a [routerLink]="['/produto-edit', produto.id]" href="" type="button" class="btn btn-editar mr-3">Editar</a>
                 <a [routerLink]="['/produto-delete', produto.id]" href="" type="button" class="btn btn-deletar">Deletar</a>
             </div>
@@ -17,7 +17,7 @@
         <!--Foto do produto-->
         <div class="produto">
             <div class="row d-flex justify-content-center">
-                <div class="container-fluid " >
+                <div class="container-fluid ">
                     <div class="d-flex justify-content-center">
                         <img src="{{produto.foto}}" class="img-fluid fotoProduto" alt="Imagem responsiva">
                     </div>
@@ -40,7 +40,7 @@
 
                 <div class="col-md-6">
                     <div class="container d-flex justify-content-end">
-                       <p class="valorProduto">$ {{produto.preco}}</p>
+                        <p class="valorProduto">$ {{produto.preco}}</p>
                     </div>
 
 
@@ -56,12 +56,12 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="container d-flex justify-content-end">
-                                <p class="publicacaoProduto">{{produto.date | date:'dd/MM/yyyy'}} as {{produto.date | date:'HH:mm'}}</p> 
+                                <p class="publicacaoProduto">{{produto.date | date:'dd/MM/yyyy'}} as {{produto.date | date:'HH:mm'}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>  
+            </div>
         </div>
         <!--/Nome, valor e publicação-->
 
@@ -77,14 +77,14 @@
             <!--{{observacao}}-->
         </div>
         <!--/Informações do produto-->
-        
+
 
 
         <!--Contato com vendedore-->
         <div class="col-md-12 d-flex justify-content-end mt-3 ">
-            <a class="mr-2" href="http://api.whatsapp.com/send?phone={{usuario.celular}}." target="_blank"> <button type="button" class="btn btn-contato" >Whatsapp</button></a>
+            <a class="mr-2" href="http://api.whatsapp.com/send?phone={{usuario.celular}}." target="_blank"> <button type="button" class="btn btn-contato">Whatsapp</button></a>
 
-            <a href="{{usuario.email}}" target="_blank"> <button type="button" class="btn btn-contato lm-2" >Email</button></a>
+            <a href="{{usuario.email}}" target="_blank"> <button type="button" class="btn btn-contato lm-2">Email</button></a>
         </div>
         <!--/Contato com vendedore-->
 

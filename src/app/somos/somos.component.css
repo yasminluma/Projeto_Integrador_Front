@@ -14,12 +14,14 @@
 .nome {
     font-weight: bold;
     font-size: 23pt;
+    font-family: monospace;
     color: white;
 }
 
 .descricao {
     font-size: 13pt;
     color: white;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .text-link,

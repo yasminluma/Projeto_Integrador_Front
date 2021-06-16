@@ -58,8 +58,8 @@ export class ProdutoComponent implements OnInit {
     })
   }
 
-  findByIdUsuario(idUsuario: number){
-    this.usuarioService.getByIdUser(this.idUsuario).subscribe((resp:Usuario)=>{
+  findByIdUsuario(idUser: number){
+    this.usuarioService.getByIdUser(idUser).subscribe((resp:Usuario)=>{
       this.usuario = resp
     })
   }
@@ -81,6 +81,17 @@ export class ProdutoComponent implements OnInit {
       this.router.navigate([''])
     })
 
+  }
+
+  autor(){
+    let ok:boolean = false
+
+    if(this.produto.usuario.id==this.idUsuario){
+    ok = true
+      
+    }
+
+    return ok
   }
   
 }
