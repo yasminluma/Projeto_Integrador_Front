@@ -1,16 +1,17 @@
-img{
+img {
     height: 150px;
     width: 150px;
 }
 
-.carta{
+.carta {
     height: 200px;
     width: 250px;
     height: auto;
+    text-align: center;
+    padding: 15px;
 }
 
-.cont{
-        
+.cont {
     font-weight: bold;
     font-size: 14pt;
     font-family: monospace;
