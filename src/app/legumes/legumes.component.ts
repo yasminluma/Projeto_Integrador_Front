@@ -41,6 +41,11 @@ export class LegumesComponent implements OnInit {
 
     window.scroll(0, 0)
 
+    if(environment.token==''){
+      alert('Sua sessão expirou,faça o login novamente')
+      this.router.navigate(['/entrar'])
+    }
+
     this.findByNomeCategoria()
     this.getAllProduto()
   }
